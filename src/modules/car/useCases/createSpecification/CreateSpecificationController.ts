@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { CreateSpecificationService } from "../../services/CreateSpecificationService";
+import { CreateSpecificationService } from "./CreateSpecificationService";
 
 class CreateSpecificationController{
     constructor(private createSpecificationService: CreateSpecificationService){}

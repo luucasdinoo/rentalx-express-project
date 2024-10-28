@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { ListCategoryService } from "../../useCases/listCategory/ListCategoryService"; 
+import { ListCategoryService } from "./ListCategoryService"; 
 
 class ListCategoryController{
     constructor(private listCategoryService: ListCategoryService){}

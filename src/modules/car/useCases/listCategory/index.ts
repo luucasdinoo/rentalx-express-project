@@ -1,5 +1,5 @@
 import { CategoryRepository } from "../../repositories/CategoryRepository";
-import { ListCategoryService } from "../../services/ListCategoryService";
+import { ListCategoryService } from "./ListCategoryService";
 import { ListCategoryController } from "./ListCategoryController"; 
 
 const categoryRepository = CategoryRepository.getInstance();

@@ -1,5 +1,5 @@
 import { CategoryRepository } from "../../repositories/CategoryRepository";
-import { CreateCategoryService } from "../../useCases/createCategory/CreateCategoryService";
+import { CreateCategoryService } from "./CreateCategoryService";
 import { CreateCategoryController } from "./CreateCategoryController";
 
 const categoryRepository = CategoryRepository.getInstance();

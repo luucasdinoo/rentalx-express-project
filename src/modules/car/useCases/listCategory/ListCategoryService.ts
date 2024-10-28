@@ -1,5 +1,5 @@
-import { Category } from "../model/Category";
-import { ICategoryRepository } from "../repositories/interface/ICategoryRepository";
+import { Category } from "../../model/Category";
+import { ICategoryRepository } from "../../repositories/interface/ICategoryRepository";
 
 
 class ListCategoryService {
