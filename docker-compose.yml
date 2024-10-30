@@ -1,12 +1,35 @@
 version: '4.3'
 
 services:
+  database:
+    image: bitnami/postgresql
+    container_name: database_rentx
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=docker
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_DB=rentx
+    volumes:
+      - pgdata:/data/postgres
+    networks: 
+      - rentx_network
   app:
     build: .
-    container_name: rentx
+    container_name: rentx_app
     ports:
       - 8080:8080
     volumes:
       - .:/usr/app
+    networks: 
+      - rentx_network
+
+volumes:
+  pgdata: 
+    driver: local
+
+networks:
+  rentx_network:
 
 # docker compose up
