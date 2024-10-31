@@ -1,4 +1,4 @@
-import { AppDataSource } from "../../../database/data-source";
+import { AppDataSource } from "@database/data-source";
 import { Category } from "../entities/Category";
 import { ICategoryRepository, ICreateCategoryDTO } from "./interface/ICategoryRepository";
 import { Repository } from "typeorm";
