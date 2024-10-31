@@ -1,3 +1,4 @@
+import { AppError } from "../../../../errors/AppError";
 import { ICategoryRepository } from "../../repositories/interface/ICategoryRepository";
 import { inject, injectable } from "tsyringe";
 
@@ -17,7 +18,7 @@ class CreateCategoryService{
 
         const categoryAlreadyExists = await this.categoryRepository.findByName(name);
         if(categoryAlreadyExists){
-            throw new Error("Category Already Exists!");
+            throw new AppError("Category Already Exists!");
         }
     
         await this.categoryRepository.create({ name, description});
