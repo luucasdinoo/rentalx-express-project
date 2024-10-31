@@ -1,5 +1,5 @@
 import { v4 as uuidV4 } from "uuid";
-import { Column, CreateDateColumn, Entity, PrimaryColumn } from "typeorm";
+import { Column, CreateDateColumn, Entity, IsNull, PrimaryColumn } from "typeorm";
 
 @Entity("users")
 class User{
@@ -21,6 +21,9 @@ class User{
 
     @Column()
     isAdmin: boolean;
+
+    @Column({ nullable: true })
+    avatar: string;
 
     @CreateDateColumn()
     created_at: Date;
